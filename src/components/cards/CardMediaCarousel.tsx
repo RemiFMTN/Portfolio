@@ -34,7 +34,7 @@ export default function CardMediaCarousel({
   const effectiveSlideIntervalMs = durationSeconds ? durationSeconds * 1000 : slideIntervalMs
 
   if (sourceImages.length === 0) {
-    return <div className="h-48 bg-gray-100" />
+    return <div className="h-48 bg-slate-900" />
   }
 
   useEffect(() => {

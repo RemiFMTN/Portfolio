@@ -30,9 +30,9 @@ function HomePage() {
 function App() {
   return (
     <>
-      <div className="bg-gray-100 min-h-screen flex flex-col">
+      <div className="app-shell min-h-screen flex flex-col text-slate-100">
         <Navbar />
-        <div className="pt-20 flex-1 flex flex-col">
+        <div className="pt-3 flex-1 flex flex-col">
           <Annonces />
           <Routes>
             <Route path="/" element={<HomePage />} />

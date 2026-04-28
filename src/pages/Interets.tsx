@@ -7,13 +7,13 @@ export default function Interets() {
 
   return (
     <main className="w-full px-4 py-10">
-        <section className="mx-auto w-full max-w-8xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="mx-auto w-full max-w-8xl p-6 shadow-lg sm:p-8">
             
 
-            <h1 className="text-3xl font-bold pb-2">Hobbies et centres d'intérêts</h1>
+            <h1 className="text-3xl font-bold pb-2 text-slate-100">Hobbies et centres d'intérêts</h1>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <HobbyCard 
-                title="informatique"
+                title="Informatique"
                 description="Le réseau, les algorithmes, etc... Passionné depuis petit, par tout ce qui touche à l'informatique. (Et oui, c'est le code de cette card)."
                 tags="Cisco - C - Java - Python - BDD"
                 image={photo("informatique.png")}/>
@@ -24,7 +24,7 @@ export default function Interets() {
                 images={[photo("rx7.webp"), photo("BMW-S-1000-RR-2025.webp")]}
                 image={photo("rx7.webp")} />
                 <HobbyCard
-                title="Aeronautique"
+                title="Aéronautique"
                 description="L'ingénieurie complexe et la beauté des avions et autres machines volantes est l'un de mes plus gros centres d'intérêts."
                 tags="Avion - Hélicoptère - Lanceurs"
                 images={[photo("rafale.jpg"), photo("saturn5.webp")]}
@@ -48,7 +48,7 @@ export default function Interets() {
                 image={photo("metallica.jpg")} />
             </div>
 
-            <h1 className="text-3xl font-bold pt-10 pb-2">Jeux vidéos</h1>
+            <h1 className="text-3xl font-bold pt-10 pb-2 text-slate-100">Jeux vidéos</h1>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <GameCard
                 title="Factorio"
@@ -95,8 +95,7 @@ export default function Interets() {
                 description="Farming simulator, Euro Truck Simulator, WorldOfWarships, Phasmophobia, Risk of Rain, Assetto Corsa, et bien d'autres..."
                 images={[photo("farming.jpg"), photo("ets2.jpg"), photo("DesMoines.webp"), photo("phasmo.webp")]}
                 image={photo("farming.jpg")}
-                tags="Simulation - Stratégie - Survie"
-                link="NULL" />
+                tags="Simulation - Stratégie - Survie" />
             </div>
 
         </section>

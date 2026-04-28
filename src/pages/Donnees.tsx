@@ -1,12 +1,12 @@
 export default function Donnees() {
   return (
     <main className="w-full px-4 py-10">
-      <section className="mx-auto w-full max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h1 className="text-2xl font-bold text-gray-900">Politique de confidentialité</h1>
+      <section className="mx-auto w-full max-w-3xl rounded-2xl border border-slate-800/80 bg-slate-900/60 p-6 shadow-lg shadow-black/20 sm:p-8">
+        <h1 className="text-2xl font-bold text-slate-100">Politique de confidentialité</h1>
 
-        <div className="mt-8 space-y-6 text-gray-700">
+        <div className="mt-8 space-y-6 text-slate-300">
           <div>
-            <h2 className="font-semibold text-gray-900">Données collectées</h2>
+            <h2 className="font-semibold text-slate-100">Données collectées</h2>
             <ul className="mt-2 list-disc pl-6 space-y-1">
               <li>Email</li>
               <li>Téléphone</li>
@@ -16,29 +16,29 @@ export default function Donnees() {
           </div>
 
           <div>
-            <h2 className="font-semibold text-gray-900">Finalité du traitement</h2>
+            <h2 className="font-semibold text-slate-100">Finalité du traitement</h2>
             <p className="mt-2 leading-relaxed">
               Ces données sont utilisées uniquement pour répondre aux messages envoyés via le formulaire de contact.
             </p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-gray-900">Base légale</h2>
+            <h2 className="font-semibold text-slate-100">Base légale</h2>
             <p className="mt-2 leading-relaxed">Le traitement est basé sur le consentement de l'utilisateur.</p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-gray-900">Destinataires</h2>
-            <p className="mt-2 leading-relaxed">Les données collectées sont transmises uniquement à l'administrateur du site. Elle peuvent transiter par le service tiers: <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">EmailJS</a>.</p>
+            <h2 className="font-semibold text-slate-100">Destinataires</h2>
+            <p className="mt-2 leading-relaxed">Les données collectées sont transmises uniquement à l'administrateur du site. Elle peuvent transiter par le service tiers: <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="text-orange-300 underline">EmailJS</a>.</p>
           </div>
           
           <div>
-            <h2 className="font-semibold text-gray-900">Durée de conservation</h2>
+            <h2 className="font-semibold text-slate-100">Durée de conservation</h2>
             <p className="mt-2 leading-relaxed">Les données sont conservées pendant une durée indéterminée sur la boite mail de l'administrateur. Vous pouvez demander leur suppression à tout moment.</p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-gray-900">Droits des utilisateurs</h2>
+            <h2 className="font-semibold text-slate-100">Droits des utilisateurs</h2>
             <p className="mt-2 leading-relaxed">
               Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :
             </p>

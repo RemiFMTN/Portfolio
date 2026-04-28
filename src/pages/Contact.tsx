@@ -46,30 +46,30 @@ export default function Contact() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center mt-10 px-4">
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center mt-10 px-4 text-slate-100">
       <h1 className="text-2xl font-bold mb-6">Contactez-moi</h1>
-      <div className="mb-4 w-full max-w-xl">
+      <div className="mb-4 w-full max-w-xl rounded-2xl border border-slate-800/80 bg-slate-900/60 p-6 shadow-lg shadow-black/20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">* Nom / Désignation</label>
-            <input type="text" id="name" name="name" required className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <label htmlFor="name" className="block text-sm font-medium mb-1 text-slate-300">* Nom / Désignation</label>
+            <input type="text" id="name" name="name" required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-1">Téléphone</label>
-            <input type="tel" id="phone" name="phone" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <label htmlFor="phone" className="block text-sm font-medium mb-1 text-slate-300">Téléphone</label>
+            <input type="tel" id="phone" name="phone" className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
           </div>
         </div>
 
-        <label htmlFor="email" className="block text-sm font-medium mt-4 mb-1">* Email</label>
-        <input type="email" id="email" name="email" required className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <label htmlFor="email" className="block text-sm font-medium mt-4 mb-1 text-slate-300">* Email</label>
+        <input type="email" id="email" name="email" required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
 
-        <label htmlFor="message" className="block text-sm font-medium mt-4 mb-1">* Message</label>
-        <textarea id="message" name="message" rows={5} required className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <label htmlFor="message" className="block text-sm font-medium mt-4 mb-1 text-slate-300">* Message</label>
+        <textarea id="message" name="message" rows={5} required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
 
-        <div className="mt-4 flex items-start gap-2">
-          <input id="consent" name="consent" type="checkbox" required className="mt-1" />
-          <label htmlFor="consent" className="text-sm text-gray-700">
-            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <a href="/donnees" className="text-blue-500 underline">politique de confidentialité</a> pour plus d'informations.
+        <div className="mt-4 flex items-start gap-2 text-slate-300">
+          <input id="consent" name="consent" type="checkbox" required className="mt-1 accent-orange-400" />
+          <label htmlFor="consent" className="text-sm">
+            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <a href="/donnees" className="text-orange-300 underline">politique de confidentialité</a> pour plus d'informations.
           </label>
         </div>
       </div>
