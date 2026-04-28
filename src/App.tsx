@@ -8,6 +8,9 @@ import Interets from "./pages/Interets"
 import { Route, Routes } from "react-router-dom"
 
 function HomePage() {
+  const baseUrl = import.meta.env.BASE_URL
+  const photo = (filename: string) => `${baseUrl}photos/${filename}`
+
   return (
     <main className="pt-5 px-6 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Mes projets</h1>
@@ -16,7 +19,7 @@ function HomePage() {
           title="Maquette TSR"
           description="Maquette de site marchand pour l'entreprise TSR Industrie, projet de stage de fin de Licence"
           tags="React - Node - CRUD - Auth - Prisma"
-          image="/photos/LOGO-HD-TSR-PASTILLE.png"
+          image={photo("LOGO-HD-TSR-PASTILLE.png")}
           link="https://github.com/RemiFMTN/TSR_StageL3"
         />
       </div>
