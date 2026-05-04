@@ -15,7 +15,6 @@ export default function Navbar() {
               <h2 className="text-sm text-slate-400">Licence 3 Informatique & Logisticien chez Leroy-Merlin</h2>
             </div>
             
-
             {/* Desktop menu */}
             <div className='hidden md:flex items-center gap-6 text-sm'>
               <NavLink to="/" onClick={() => setOpen(false)} className="text-slate-200 hover:text-orange-300 transition">Projets / Acceuil</NavLink>

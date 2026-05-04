@@ -4,6 +4,7 @@ type CardMediaCarouselProps = {
   title: string
   image?: string
   images?: string[]
+  imageFit?: "cover" | "contain"
   durationSeconds?: number
   slideIntervalMs?: number
   slideTransitionMs?: number
@@ -24,6 +25,7 @@ export default function CardMediaCarousel({
   title,
   image,
   images,
+  imageFit = "cover",
   durationSeconds,
   slideIntervalMs = 3500,
   slideTransitionMs = 450,
@@ -60,8 +62,10 @@ export default function CardMediaCarousel({
     }
   }, [delayMs, effectiveSlideIntervalMs, sourceImages.length, title])
 
+  const isContain = imageFit === "contain"
+
   return (
-    <div className="overflow-hidden h-48">
+    <div className="overflow-hidden h-48 bg-slate-950/70">
       <div
         className="flex h-48 w-full transition-transform ease-in-out"
         style={{
@@ -70,11 +74,18 @@ export default function CardMediaCarousel({
         }}
       >
         {sourceImages.map((sourceImage, index) => (
-          <div key={`${sourceImage}-${index}`} className="h-48 w-full flex-none overflow-hidden">
+          <div
+            key={`${sourceImage}-${index}`}
+            className={`h-48 w-full flex-none overflow-hidden ${
+              isContain ? "flex items-center justify-center" : ""
+            }`}
+          >
             <img
               src={sourceImage}
               alt={`${title} - image ${index + 1}`}
-              className="h-full w-full object-cover"
+              className={
+                isContain ? "h-full w-auto object-contain" : "h-full w-full object-cover"
+              }
             />
           </div>
         ))}

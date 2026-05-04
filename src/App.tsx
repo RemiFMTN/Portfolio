@@ -5,23 +5,26 @@ import Contact from "./pages/Contact"
 import Footer from "./components/Footer"
 import Donnees from "./pages/Donnees"
 import Interets from "./pages/Interets"
+import ProjectDetail from "./pages/ProjectDetail"
+import { projects } from "./data/projects"
 import { Route, Routes } from "react-router-dom"
 
 function HomePage() {
-  const baseUrl = import.meta.env.BASE_URL
-  const photo = (filename: string) => `${baseUrl}photos/${filename}`
-
   return (
     <main className="pt-5 px-6 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Mes projets</h1>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <ProjectCard
-          title="Maquette TSR"
-          description="Maquette de site marchand pour l'entreprise TSR Industrie, projet de stage de fin de Licence"
-          tags="React - Node - CRUD - Auth - Prisma"
-          image={photo("LOGO-HD-TSR-PASTILLE.png")}
-          link="https://github.com/RemiFMTN/TSR_StageL3"
-        />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.slug}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+            image={project.coverImage}
+            images={project.cardImages}
+            link={`/projets/${project.slug}`}
+          />
+        ))}
       </div>
     </main>
   )
@@ -36,6 +39,7 @@ function App() {
           <Annonces />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/projets/:slug" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donnees" element={<Donnees />} />
             <Route path="/interets" element={<Interets />} />
