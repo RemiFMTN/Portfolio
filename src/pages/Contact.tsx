@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { FormEvent } from "react"
 import emailjs from "@emailjs/browser"
 import Bouton from "../components/Bouton"
+import { Link } from "react-router-dom"
 
 export default function Contact() {
   const [isSending, setIsSending] = useState(false)
@@ -69,7 +70,7 @@ export default function Contact() {
         <div className="mt-4 flex items-start gap-2 text-[var(--muted)]">
           <input id="consent" name="consent" type="checkbox" required className="mt-1 accent-[var(--button)]" />
           <label htmlFor="consent" className="text-sm">
-            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <a href="/donnees" className="text-[var(--button)] underline">politique de confidentialité</a> pour plus d'informations.
+            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <Link to="/Donnees" className="text-[var(--button)] underline">politique de confidentialité</Link> pour plus d'informations.
           </label>
         </div>
       </div>
