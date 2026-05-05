@@ -8,6 +8,7 @@ import Interets from "./pages/Interets"
 import ProjectDetail from "./pages/ProjectDetail"
 import { projects } from "./data/projects"
 import { Route, Routes } from "react-router-dom"
+import CV from "./pages/CV"
 
 function HomePage() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/donnees" element={<Donnees />} />
             <Route path="/interets" element={<Interets />} />
+            <Route path="/cv" element={<CV />} />
           </Routes>
         </div>
         <Footer />

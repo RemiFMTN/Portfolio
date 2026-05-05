@@ -17,9 +17,10 @@ export default function Navbar() {
             
             {/* Desktop menu */}
             <div className='hidden md:flex items-center gap-6 text-sm'>
+              <NavLink to="/cv" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Générateur CV</NavLink>
               <NavLink to="/" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Projets / Acceuil</NavLink>
               <NavLink to="/interets" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Intérêts</NavLink>
-              <NavLink to="/contact" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Contact</NavLink>
+              <NavLink to="/contact" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Contact</NavLink>              
 
                 {/* GitHubg */}
                 <a
