@@ -19,20 +19,20 @@ export default function ProjectDetailCard({
   repoUrl,
 }: ProjectDetailCardProps) {
   return (
-    <article className="rounded-3xl border border-slate-800/80 bg-slate-900/80 shadow-xl shadow-black/30">
-      <header className="px-6 pt-6 pb-4 border-b border-slate-800/80">
+    <article className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] shadow-xl shadow-black/30">
+      <header className="px-6 pt-6 pb-4 border-b border-[var(--border)]">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-100">{title}</h1>
-            <p className="text-slate-300 mt-2 max-w-3xl">{description}</p>
-            <p className="text-slate-400 mt-2 text-sm font-semibold">{tags}</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text)]">{title}</h1>
+            <p className="text-[var(--muted)] mt-2 max-w-3xl">{description}</p>
+            <p className="text-[var(--muted)] mt-2 text-sm font-semibold">{tags}</p>
           </div>
           {repoUrl ? (
             <a
               href={repoUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-3 inline-flex items-center justify-center rounded-full border border-orange-400/50 px-4 py-2 text-sm font-semibold text-orange-200 transition hover:border-orange-300 hover:text-orange-100 sm:mt-0"
+              className="mt-3 inline-flex items-center justify-center rounded-full border border-[var(--button)] px-4 py-2 text-sm font-semibold text-[var(--button)] transition hover:brightness-110 sm:mt-0"
             >
               Voir le repo
             </a>
@@ -43,7 +43,7 @@ export default function ProjectDetailCard({
       <div className="p-6 grid gap-8">
         {sections.map((section, index) => (
           <figure key={`${section.src}-${index}`} className="grid gap-3">
-            <div className="max-h-[520px] rounded-2xl border border-slate-800/80 bg-slate-950/70">
+            <div className="max-h-[520px] rounded-2xl border border-[var(--border)] bg-[var(--bg-elev)]">
               <img
                 src={section.src}
                 alt={`${title} - capture ${index + 1}`}
@@ -51,7 +51,7 @@ export default function ProjectDetailCard({
                 loading="lazy"
               />
             </div>
-            <figcaption className="text-slate-300 text-sm leading-relaxed">
+            <figcaption className="text-[var(--muted)] text-sm leading-relaxed">
               {section.text}
             </figcaption>
           </figure>

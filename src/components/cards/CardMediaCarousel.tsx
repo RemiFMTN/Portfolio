@@ -36,7 +36,7 @@ export default function CardMediaCarousel({
   const effectiveSlideIntervalMs = durationSeconds ? durationSeconds * 1000 : slideIntervalMs
 
   if (sourceImages.length === 0) {
-    return <div className="h-48 bg-slate-900" />
+    return <div className="h-48 bg-[var(--bg-card)]" />
   }
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function CardMediaCarousel({
   const isContain = imageFit === "contain"
 
   return (
-    <div className="overflow-hidden h-48 bg-slate-950/70">
+    <div className="overflow-hidden h-48 bg-[var(--bg-elev)]">
       <div
         className="flex h-48 w-full transition-transform ease-in-out"
         style={{

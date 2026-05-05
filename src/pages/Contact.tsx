@@ -46,30 +46,30 @@ export default function Contact() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center mt-10 px-4 text-slate-100">
+    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center mt-10 px-4 text-[var(--text)]">
       <h1 className="text-2xl font-bold mb-6">Contactez-moi</h1>
-      <div className="mb-4 w-full max-w-xl rounded-2xl border border-slate-800/80 bg-slate-900/60 p-6 shadow-lg shadow-black/20">
+      <div className="mb-4 w-full max-w-xl rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-lg shadow-black/20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1 text-slate-300">* Nom / Désignation</label>
-            <input type="text" id="name" name="name" required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            <label htmlFor="name" className="block text-sm font-medium mb-1 text-[var(--muted)]">* Nom / Désignation</label>
+            <input type="text" id="name" name="name" required className="w-full rounded-md border border-[var(--border)] bg-[var(--bg-elev)] py-2 px-3 text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-[var(--button)]" />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-1 text-slate-300">Téléphone</label>
-            <input type="tel" id="phone" name="phone" className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            <label htmlFor="phone" className="block text-sm font-medium mb-1 text-[var(--muted)]">Téléphone</label>
+            <input type="tel" id="phone" name="phone" className="w-full rounded-md border border-[var(--border)] bg-[var(--bg-elev)] py-2 px-3 text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-[var(--button)]" />
           </div>
         </div>
 
-        <label htmlFor="email" className="block text-sm font-medium mt-4 mb-1 text-slate-300">* Email</label>
-        <input type="email" id="email" name="email" required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+        <label htmlFor="email" className="block text-sm font-medium mt-4 mb-1 text-[var(--muted)]">* Email</label>
+        <input type="email" id="email" name="email" required className="w-full rounded-md border border-[var(--border)] bg-[var(--bg-elev)] py-2 px-3 text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-[var(--button)]" />
 
-        <label htmlFor="message" className="block text-sm font-medium mt-4 mb-1 text-slate-300">* Message</label>
-        <textarea id="message" name="message" rows={5} required className="w-full rounded-md border border-slate-700 bg-slate-950/60 py-2 px-3 text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+        <label htmlFor="message" className="block text-sm font-medium mt-4 mb-1 text-[var(--muted)]">* Message</label>
+        <textarea id="message" name="message" rows={5} required className="w-full rounded-md border border-[var(--border)] bg-[var(--bg-elev)] py-2 px-3 text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-[var(--button)]"></textarea>
 
-        <div className="mt-4 flex items-start gap-2 text-slate-300">
-          <input id="consent" name="consent" type="checkbox" required className="mt-1 accent-orange-400" />
+        <div className="mt-4 flex items-start gap-2 text-[var(--muted)]">
+          <input id="consent" name="consent" type="checkbox" required className="mt-1 accent-[var(--button)]" />
           <label htmlFor="consent" className="text-sm">
-            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <a href="/donnees" className="text-orange-300 underline">politique de confidentialité</a> pour plus d'informations.
+            J'accepte que mes données soient utilisées afin d'être recontacté. Consulter la <a href="/donnees" className="text-[var(--button)] underline">politique de confidentialité</a> pour plus d'informations.
           </label>
         </div>
       </div>

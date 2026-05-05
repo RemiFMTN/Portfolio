@@ -26,7 +26,7 @@ export default function GameCard({
             href={link}
             target="_blank"
             rel="noreferrer"
-            className="group block rounded-2xl overflow-hidden border border-slate-800/80 bg-slate-900/80 shadow-lg shadow-black/20 transition duration-300 hover:border-slate-700"
+            className="group block rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)] shadow-lg shadow-black/20 transition duration-300 hover:border-[var(--button)]"
         >
             <CardMediaCarousel
                 title={title}
@@ -37,10 +37,10 @@ export default function GameCard({
             />
 
             {/* Contenu */}
-            <div className="p-4 text-slate-100">
+            <div className="p-4 text-[var(--text)]">
                 <h2 className="text-lg font-semibold mb-2">{title}</h2>
-                <p className="text-slate-300 text-sm">{description}</p>
-                <p className="text-slate-400 text_sm font-semibold mt-1">{tags}</p>
+                <p className="text-[var(--muted)] text-sm">{description}</p>
+                <p className="text-[var(--muted)] text_sm font-semibold mt-1">{tags}</p>
             </div>
         </a>
   )

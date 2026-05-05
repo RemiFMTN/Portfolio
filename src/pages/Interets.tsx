@@ -7,10 +7,10 @@ export default function Interets() {
 
   return (
     <main className="w-full px-4 py-10">
-      <section className="mx-auto w-full max-w-8xl p-6 shadow-lg sm:p-8">
+      <section className="mx-auto w-full max-w-8xl p-6 sm:p-8">
             
 
-            <h1 className="text-3xl font-bold pb-2 text-slate-100">Hobbies et centres d'intérêts</h1>
+            <h1 className="text-3xl font-bold pb-2 text-[var(--text)]">Hobbies et centres d'intérêts</h1>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <HobbyCard 
                 title="Informatique"
@@ -48,7 +48,7 @@ export default function Interets() {
                 image={photo("metallica.jpg")} />
             </div>
 
-            <h1 className="text-3xl font-bold pt-10 pb-2 text-slate-100">Jeux vidéos</h1>
+            <h1 className="text-3xl font-bold pt-10 pb-2 text-[var(--text)]">Jeux vidéos</h1>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <GameCard
                 title="Factorio"

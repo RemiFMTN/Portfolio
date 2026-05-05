@@ -10,14 +10,14 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <main className="pt-10 px-6 max-w-5xl mx-auto">
-        <div className="rounded-2xl border border-slate-800/80 bg-slate-900/70 p-6 text-slate-200">
+        <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 text-[var(--text)]">
           <h1 className="text-2xl font-bold">Projet introuvable</h1>
-          <p className="text-slate-400 mt-2">
+          <p className="text-[var(--muted)] mt-2">
             Le projet demande n'existe pas ou a ete supprime.
           </p>
           <Link
             to="/"
-            className="inline-flex items-center mt-4 text-orange-200 hover:text-orange-100"
+            className="inline-flex items-center mt-4 text-[var(--button)] hover:brightness-110"
           >
             Retour aux projets
           </Link>
@@ -29,7 +29,7 @@ export default function ProjectDetail() {
   return (
     <main className="pt-10 px-6 max-w-5xl mx-auto">
       <div className="mb-6">
-        <Link to="/" className="text-orange-200 hover:text-orange-100">
+        <Link to="/" className="text-[var(--button)] hover:brightness-110">
           Retour aux projets
         </Link>
       </div>

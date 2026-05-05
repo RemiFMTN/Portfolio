@@ -11,7 +11,7 @@ function Bouton({ title, type = "button", onClick, disabled = false }: BoutonPro
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className="border border-slate-700/80 rounded-full py-2 px-4 bg-slate-900 text-slate-100 hover:bg-slate-100 hover:text-slate-950 transition disabled:opacity-50 disabled:cursor-not-allowed"
+      className="border border-[var(--button)] rounded-full py-2 px-4 bg-[var(--button)] text-[var(--bg)] hover:brightness-110 transition disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {title}
     </button>

@@ -2,24 +2,24 @@
 
 :root {
 	color-scheme: dark;
-	--bg: #0b0f14;
-	--bg-elev: #0f172a;
-	--bg-card: #111827;
-	--border: #1f2937;
-	--text: #e5e7eb;
-	--muted: #94a3b8;
-	--accent: #7dd3fc;
-}
-
-body {
-	background: var(--bg);
-	color: var(--text);
+	--bg: #1d1d1d;
+	--bg-elev: #232323;
+	--bg-card: #2a2a2a;
+	--border: #343434;
+	--text: #f1f1f1;
+	--muted: #b0b3b8;
+	--accent: #9ad7ff;
+	--pattern: rgba(160, 166, 174, 0.16);
+	--button: #ff8f49;
 }
 
 .app-shell {
-	background:
-		radial-gradient(1200px 600px at 15% -10%, rgba(125, 211, 252, 0.12), transparent 60%),
-		radial-gradient(900px 500px at 85% 0%, rgba(148, 163, 184, 0.12), transparent 55%),
-		var(--bg);
+	background-color: var(--bg);
+	background-image:
+		radial-gradient(1200px 600px at 15% -10%, rgba(125, 211, 252, 0.08), transparent 60%),
+		radial-gradient(900px 500px at 85% 0%, rgba(148, 163, 184, 0.08), transparent 55%),
+		radial-gradient(circle, var(--pattern) 1px, transparent 1px);
+	background-size: auto, auto, 24px 24px;
+	background-position: top left, top right, 0 0;
 	color: var(--text);
 }

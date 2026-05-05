@@ -33,7 +33,7 @@ function HomePage() {
 function App() {
   return (
     <>
-      <div className="app-shell min-h-screen flex flex-col text-slate-100">
+      <div className="app-shell min-h-screen flex flex-col text-[var(--text)]">
         <Navbar />
         <div className="pt-3 flex-1 flex flex-col">
           <Annonces />
