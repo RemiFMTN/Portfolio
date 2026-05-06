@@ -6,7 +6,7 @@ type ProjectDetailSection = {
 type ProjectDetailCardProps = {
   title: string
   description: string
-  tags: string
+  tags?: string
   sections: ProjectDetailSection[]
   repoUrl?: string
 }
@@ -25,7 +25,9 @@ export default function ProjectDetailCard({
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text)]">{title}</h1>
             <p className="text-[var(--muted)] mt-2 max-w-3xl">{description}</p>
-            <p className="text-[var(--muted)] mt-2 text-sm font-semibold">{tags}</p>
+            {tags && (
+              <p className="text-[var(--muted)] mt-2 text-sm font-semibold">{tags}</p>
+            )}
           </div>
           {repoUrl ? (
             <a

@@ -36,7 +36,7 @@ export default function ProjectDetail() {
       <ProjectDetailCard
         title={project.title}
         description={project.description}
-        tags={project.tags}
+        tags={project.tags.join(" - ")}
         sections={project.sections}
         repoUrl={project.repoUrl}
       />

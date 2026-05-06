@@ -35,10 +35,6 @@ export default function CardMediaCarousel({
   const [activeIndex, setActiveIndex] = useState(0)
   const effectiveSlideIntervalMs = durationSeconds ? durationSeconds * 1000 : slideIntervalMs
 
-  if (sourceImages.length === 0) {
-    return <div className="h-48 bg-[var(--bg-card)]" />
-  }
-
   useEffect(() => {
     if (sourceImages.length <= 1) {
       return
@@ -61,6 +57,10 @@ export default function CardMediaCarousel({
       }
     }
   }, [delayMs, effectiveSlideIntervalMs, sourceImages.length, title])
+
+  if (sourceImages.length === 0) {
+    return <div className="h-48 bg-[var(--bg-card)]" />
+  }
 
   const isContain = imageFit === "contain"
 

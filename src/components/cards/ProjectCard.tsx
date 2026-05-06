@@ -5,7 +5,7 @@ import CardMediaCarousel from "./CardMediaCarousel"
 type ProjectCardProps = {
     title: string
     description: string
-    tags: string
+    tags: string[]
     image: string
     images?: string[]
     link: string
@@ -25,6 +25,8 @@ export default function ProjectCard({
     durationSeconds,
     delayMs,
 }: ProjectCardProps) {
+
+    const cardStyle = "group block rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)] shadow-lg shadow-black/20 transition duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:border-[var(--button)]"
     const content = (
         <>
             <CardMediaCarousel
@@ -39,7 +41,7 @@ export default function ProjectCard({
             <div className="p-4 text-[var(--text)]">
                 <h2 className="text-lg font-semibold mb-2">{title}</h2>
                 <p className="text-[var(--muted)] text-sm">{description}</p>
-                <p className="text-[var(--muted)] text_sm font-semibold mt-1">{tags}</p>
+                <p className="text-[var(--muted)] text-sm font-semibold mt-1">{tags}</p>
             </div>
         </>
     )
@@ -50,7 +52,8 @@ export default function ProjectCard({
                 href={link}
                 target="_blank"
                 rel="noreferrer"
-                className="group block rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)] shadow-lg shadow-black/20 transition duration-300 hover:border-[var(--button)]"
+                className={cardStyle}
+                aria-label={`Voir le projet ${title}`}
             >
                 {content}
             </a>
@@ -60,7 +63,8 @@ export default function ProjectCard({
     return (
         <Link
             to={link}
-            className="group block rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)] shadow-lg shadow-black/20 transition duration-300 hover:border-[var(--button)]"
+            className={cardStyle}
+            aria-label={`Voir le projet ${title}`}
         >
             {content}
         </Link>

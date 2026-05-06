@@ -7,7 +7,7 @@ export type Project = {
   title: string
   slug: string
   description: string
-  tags: string
+  tags: string[]
   coverImage: string
   cardImages?: string[]
   repoUrl?: string
@@ -31,8 +31,8 @@ export const projects: Project[] = [
     title: "Maquette TSR",
     slug: slugify("Maquette TSR"),
     description:
-      "Maquette de site marchand pour l'entreprise TSR Industrie, projet de stage de fin de Licence.",
-    tags: "React - Node - CRUD - Auth - Prisma",
+      "Maquette de site marchand pour l'entreprise TSR Industrie, projet de stage de fin de licence.",
+    tags: ["React ", "Node ", "CRUD ", "Auth ", "Prisma "],
     coverImage: photo("tsr/LOGO-HD-TSR-PASTILLE.png"),
     cardImages: [photo("tsr/LOGO-HD-TSR-PASTILLE.png")],
     repoUrl: "https://github.com/RemiFMTN/TSR_StageL3",
@@ -43,11 +43,11 @@ export const projects: Project[] = [
       },
       {
         src: photo("tsr/accueil.png"),
-        text: "Page d'acceuil, avec la liste des produits disponnibles pour les visiteurs. On y retrouve une navbar fonctionnelle et un barre de recherche.",
+        text: "Page d'accueil, avec la liste des produits disponibles pour les visiteurs. On y retrouve une navbar fonctionnelle et une barre de recherche.",
       },
       {
         src: photo("tsr/recherche.png"),
-        text: "La barre de recherche avec le résultat pour le mot clé 'fer'.",
+        text: "La barre de recherche avec le résultat pour le mot-clé 'fer'.",
       },
       {
         src: photo("tsr/panier.png"),
@@ -68,18 +68,18 @@ export const projects: Project[] = [
     slug: slugify("Projet CISCO"),
     description:
       "Réalisé en autodidacte, mise en place de 3 VLANS avec droits respectifs et router-on-a-stick.",
-    tags: "CISCO - Réseau - Topologie basique - ACL - DHCP - VLAN",
+    tags: ["CISCO ", "Réseau ", "Topologie basique ", "ACL ", "DHCP ", "VLAN "],
     coverImage: photo("cisco/topologie.png"),
     cardImages: [photo("cisco/topologie.png")],
-    repoUrl: "",
+    repoUrl: undefined,
     sections: [
       {
         src: photo("cisco/topologie.png"),
-        text: "Il s'agit d'un projet personnel autodidacte qui représente la mise en place d'un réseau d'entreprise sommaire sous la forme d'un VLAN séparé en trois résaux logiques. Les différentes machines possèdent différents droits d'accès.",
+        text: "Il s'agit d'un projet personnel autodidacte qui représente la mise en place d'un réseau d'entreprise sommaire sous la forme d'un VLAN séparé en trois réseaux logiques. Les différentes machines possèdent différents droits d'accès.",
       },
       {
         src: photo("cisco/config_ordi.png"),
-        text: "Configuration de base pour les machines. VLAN séparé en 4 parties: 192.168.10.x/24, 192.168.20.x/24 (etc...), et les gateways correspondates 192.168.10.1, 192.168.20.1 etc...",
+        text: "Configuration de base pour les machines. VLAN séparé en 4 parties: 192.168.10.x/24, 192.168.20.x/24 (etc...), et les gateways correspondantes 192.168.10.1, 192.168.20.1 etc...",
       },
       {
         src: photo("cisco/config_switch.png"),
@@ -91,19 +91,19 @@ export const projects: Project[] = [
       },
       {
         src: photo("cisco/switch_trunk.png"),
-        text: "Passage du port en trunk, afin de faire passer les paquets pour les faire atteindre leur bon destinataire.",
+        text: "Passage du port en trunk, afin de faire passer les paquets pour leur faire atteindre leur bon destinataire.",
       },
       {
         src: photo("cisco/config_router_encap.png"),
-        text: "Configuration du routeur, on paramètre les sous interfaces pour que le paquets soit bien routé vers sa cible.",
+        text: "Configuration du routeur, on paramètre les sous-interfaces pour que les paquets soient bien routés vers sa cible.",
       },
       {
         src: photo("cisco/config_acl.png"),
-        text: "Configuration de l'ACL. On cherche à bloquer les ping de 192.168.10.x vers 192.168.40.x.",
+        text: "Configuration de l'ACL. On cherche à bloquer les pings de 192.168.10.x vers 192.168.40.x.",
       },
       {
         src: photo("cisco/limitations.png"),
-        text: "Preuve de fonctionnement de l'ACL qui limite le ping de 192.168.10.x (users) vers 192.168.40.x (serveurs). Les autres secteurs peuvent ping les serveurs, et les serveurs peuvent ping tout le monde. On peut bloquer plus tard les accès extérieurs au servers, et l'autoriser seulement aux secteurs IT et RH",
+        text: "Preuve de fonctionnement de l'ACL qui limite les pings de 192.168.10.x (users) vers 192.168.40.x (serveurs). Les autres secteurs peuvent ping les serveurs, et les serveurs peuvent ping tout le monde. On peut bloquer plus tard les accès extérieurs au servers, et les autoriser seulement aux secteurs IT et RH",
       },
       {
         src: photo("cisco/dhcp.png"),
