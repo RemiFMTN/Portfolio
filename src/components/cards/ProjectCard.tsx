@@ -5,7 +5,7 @@ import CardMediaCarousel from "./CardMediaCarousel"
 type ProjectCardProps = {
     title: string
     description: string
-    tags: string[]
+    tags: string
     image: string
     images?: string[]
     link: string

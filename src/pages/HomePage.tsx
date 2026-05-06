@@ -12,7 +12,7 @@ export default function HomePage() {
             key={project.slug}
             title={project.title}
             description={project.description}
-            tags={project.tags}
+            tags={project.tags.join(" - ")}
             image={project.coverImage}
             images={project.cardImages}
             link={`/projets/${project.slug}`}
