@@ -13,7 +13,7 @@ export default function ProjectDetail() {
         <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 text-[var(--text)]">
           <h1 className="text-2xl font-bold">Projet introuvable</h1>
           <p className="text-[var(--muted)] mt-2">
-            Le projet demande n'existe pas ou a ete supprime.
+            Le projet demandé n'existe pas ou a été supprimé.
           </p>
           <Link
             to="/"
@@ -39,6 +39,7 @@ export default function ProjectDetail() {
         tags={project.tags.join(" - ")}
         sections={project.sections}
         repoUrl={project.repoUrl}
+        playUrl={project.playUrl}
       />
     </main>
   )

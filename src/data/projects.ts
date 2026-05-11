@@ -11,6 +11,8 @@ export type Project = {
   coverImage: string
   cardImages?: string[]
   repoUrl?: string
+  playUrl?: string
+  playButton?: boolean
   sections: ProjectDetailSection[]
 }
 
@@ -112,6 +114,44 @@ export const projects: Project[] = [
       {
         src: photo("cisco/dhcp_exemple.png"),
         text: "Résultat du DHCP. Chaque machine obtient une adresse IP dans le bon secteur, avec la bonne gateway. Par exemple, PC1 obtient l'adresse 192.168.10.11, et la gateway 192.168.10.1.",
+      },
+    ],
+  },
+  {
+    title: "Simulateur d'orbites spatiales",
+    slug: slugify("Simulateur d'orbites spatiales"),
+    description:
+      "Un simulateur d'orbites spatiales permettant de visualiser les trajectoires des corps célèstes.",
+    tags: ["Simulation ", "Lois de Kepler & Newton ", "Physique "],
+    coverImage: "undefined",
+    cardImages: [photo("pygame/orbites.png")],
+    repoUrl: undefined,
+    playUrl: `${baseUrl}pygame/web/index.html`,
+    playButton: false,
+    sections: [
+      {
+        src: photo("pygame/orbites.png"),
+        text: "WASD -> Déplacement de la caméra, click&drag -> bouger les corps, scroll -> zoom."
+      },
+      {
+        src: photo("pygame/données.png"),
+        text: "Les données utilisées pour les planètes sont basées sur des valeurs réelles, telles que la masse, la distance au soleil, et l'excentricité de l'orbite. Ces données permettent de simuler les trajectoires de manière réaliste. On considère ici qu'une UA = 200 pixels à zoom = 1."
+      },
+      {
+        src: photo("pygame/constantes_planetaires.png"),
+        text: "Les positions des planètes sont calculées à partir de leurs paramètres orbitaux, tels que la distance au soleil et l'excentricité. La vitesse de chaque planète est déterminée par la loi de Kepler, qui stipule que la vitesse est plus élevée lorsque la planète est plus proche du soleil."
+      },
+      {
+        src: photo("pygame/perihelie.jpg"),
+        text: "La position au périhélie est calculée en utilisant la distance au soleil et l'excentricité de l'orbite."
+      },
+      {
+        src: photo("pygame/calcul_forces.png"),
+        text: "La formule de gravitation est appliqué en permanence entre tous les corps, en simultané. Cela simule une uttraction gravitationnelle réelle entre tout les corps."
+      },
+      {
+        src: photo("pygame/acceleration.png"),
+        text: "Je simule également l'accelération des corps, suivant la loi de Kepler et de Newton, ce qui permet d'avoir des trajectoires réalistes.",
       },
     ],
   },

@@ -9,6 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "py_build": "powershell -ExecutionPolicy Bypass -File scripts\\pygbag_build.ps1",
+    "py_import": "powershell -ExecutionPolicy Bypass -File scripts\\pygbag_import.ps1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
