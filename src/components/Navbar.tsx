@@ -18,7 +18,7 @@ export default function Navbar() {
             {/* Desktop menu */}
             <div className='hidden md:flex items-center gap-6 text-sm'>
               <NavLink to="/cv" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Générateur CV</NavLink>
-              <NavLink to="/" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Projets / Acceuil</NavLink>
+              <NavLink to="/" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Projets / Accueil</NavLink>
               <NavLink to="/interets" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Intérêts</NavLink>
               <NavLink to="/contact" onClick={() => setOpen(false)} className="text-[var(--text)] hover:text-[var(--button)] transition">Contact</NavLink>              
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <div className="px-6 pb-8 pt-6">
                   <div className="flex flex-col gap-5 text-lg">
                     <NavLink onClick={() => setOpen(false)} to="/cv" className="text-[var(--text)] hover:text-[var(--button)] transition">Générateur CV</NavLink>
-                    <NavLink onClick={() => setOpen(false)} to="/" className="text-[var(--text)] hover:text-[var(--button)] transition">Projets / Acceuil</NavLink>
+                    <NavLink onClick={() => setOpen(false)} to="/" className="text-[var(--text)] hover:text-[var(--button)] transition">Projets / Accueil</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/interets" className="text-[var(--text)] hover:text-[var(--button)] transition">Intérêts</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/contact" className="text-[var(--text)] hover:text-[var(--button)] transition">Contact</NavLink>
 
